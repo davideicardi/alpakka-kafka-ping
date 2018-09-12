@@ -11,12 +11,13 @@ Scala app written in Alpakka to test Kafka connectivity
 
 Run:
 
-    curl -O https://davideshare.blob.core.windows.net/public/alpakka-kafka-ping-0.1.zip
     curl -O https://davideshare.blob.core.windows.net/public/alpakka-kafka-ping/application.conf
-    # Modify configuration files according to your needs
     curl -O https://davideshare.blob.core.windows.net/public/alpakka-kafka-ping/log4j2.xml
+    # Modify configuration files according to your needs
+    curl -O https://davideshare.blob.core.windows.net/public/alpakka-kafka-ping-0.1.zip
 
     unzip alpakka-kafka-ping-0.1.zip
+
     ./alpakka-kafka-ping-0.1/bin/alpakka-kafka-ping \
         -Dconfig.file=./application.conf \
         -Dlog4j.configurationFile=./log4j2.xml
@@ -24,8 +25,10 @@ Run:
 
 ## Kerberos
         
-To enable kerberos authentication add 
+To enable kerberos authentication use
 
-    -Djava.security.auth.login.config=./jaas.conf
-    
+    ./alpakka-kafka-ping-0.1/bin/alpakka-kafka-ping \
+        -Dconfig.file=./application.conf \
+        -Dlog4j.configurationFile=./log4j2.xml \
+        -Djava.security.auth.login.config=./jaas.conf    
 TODO
