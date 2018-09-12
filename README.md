@@ -9,11 +9,12 @@ Scala app written in Alpakka to test Kafka connectivity
 
 ## Run
 
-Create an `application.conf` to override any settings.
-
-Create a `log4j2.xml` to override log4j settings.
-
 Run:
+
+    curl -O https://davideshare.blob.core.windows.net/public/alpakka-kafka-ping-0.1.zip
+    curl -O https://davideshare.blob.core.windows.net/public/alpakka-kafka-ping/application.conf
+    # Modify configuration files according to your needs
+    curl -O https://davideshare.blob.core.windows.net/public/alpakka-kafka-ping/log4j2.xml
 
     unzip alpakka-kafka-ping-0.1.zip
     ./alpakka-kafka-ping-0.1/bin/alpakka-kafka-ping \
